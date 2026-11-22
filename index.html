@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f0ef">
+<title>for lara, with love</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f0ef;--paper:#fffdfa;--cover:#ead9d7;--ink:#453b3a;--muted:#9a8885;--line:#eee4e0;--rose:#a47d7a}
+*{box-sizing:border-box}html{min-height:100%;background:var(--bg)}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:35px 18px;color:var(--ink);background:radial-gradient(ellipse at 50% 42%,#fffaf8 0%,var(--bg) 75%);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{width:min(100%,700px);text-align:center}.topline{display:flex;align-items:center;justify-content:center;gap:13px;margin:0 0 27px;color:var(--muted);font-size:9px;letter-spacing:.25em;text-transform:uppercase}.topline:before,.topline:after{content:"";width:28px;height:1px;background:#d9c9c5}
+.book-stage{position:relative;width:min(100%,560px);height:min(690px,76vh);min-height:560px;margin:auto;perspective:1400px;filter:drop-shadow(0 26px 28px rgba(70,48,47,.10))}
+.page,.cover{position:absolute;inset:0;border-radius:3px 8px 8px 3px;overflow:hidden}.cover{z-index:2;border:1px solid rgba(255,255,255,.75);background:linear-gradient(135deg,#f0e2df 0%,#ead9d7 58%,#e4cfcd 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:55px 36px;cursor:pointer;color:var(--ink);transition:transform .95s cubic-bezier(.2,.72,.18,1),opacity .65s ease;transform-origin:left center;text-align:center}.cover:before{content:"";position:absolute;inset:17px;border:1px solid rgba(133,97,96,.22);pointer-events:none}.cover:after{content:"";position:absolute;top:0;bottom:0;left:27px;width:1px;background:rgba(133,97,96,.13)}
+.cover-index{position:absolute;top:43px;left:0;right:0;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#987b79}.cover-title{font-family:'Italiana','Playfair Display',serif;font-weight:400;font-size:clamp(52px,9vw,76px);line-height:.98;letter-spacing:-.035em;color:#493d3c}.cover-title em{font-family:'Playfair Display',serif;font-size:.48em;font-weight:400;letter-spacing:.02em;display:block;margin-top:15px;color:#8b6c6c}.cover-mark{width:34px;height:1px;background:#ad8885;margin-top:33px}.cover-hint{position:absolute;bottom:43px;left:0;right:0;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#987b79}
+.page{z-index:1;background:var(--paper);border:1px solid #eee6e1;text-align:left;padding:clamp(32px,6vw,58px) clamp(27px,7vw,62px) 34px;overflow-y:auto;opacity:0;visibility:hidden;transform:translateX(14px);transition:opacity .55s ease .25s,transform .7s ease,visibility 0s linear .8s;scrollbar-width:thin;scrollbar-color:#dfcfcb transparent}.page:before{content:"";position:absolute;top:0;bottom:0;left:18px;width:1px;background:#f0e8e4;pointer-events:none}
+.open .cover{transform:rotateY(-108deg);opacity:0;pointer-events:none}.open .page{opacity:1;visibility:visible;transform:translateX(0);transition:opacity .65s ease .2s,transform .7s ease .15s,visibility 0s}
+.letter-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:17px;border-bottom:1px solid var(--line);margin-bottom:27px;color:var(--muted);font-size:9px;letter-spacing:.19em;text-transform:uppercase}.letter h1{font-family:'Playfair Display',serif;font-size:clamp(29px,5vw,36px);font-weight:400;letter-spacing:-.025em;margin:0 0 20px;color:#514342}.letter p{font-size:13px;line-height:1.9;letter-spacing:.003em;color:#665b58;margin:0 0 15px}.letter p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:2.65em;float:left;line-height:.8;padding:7px 7px 0 0;color:#a47d7b}.signoff{margin-top:25px;padding-top:17px;border-top:1px solid var(--line);font-family:'Playfair Display',serif;font-size:16px;line-height:1.65;font-style:italic;color:#765f5d}.signoff strong{font-family:'Italiana',serif;font-size:23px;font-weight:400;font-style:normal;letter-spacing:.02em}
+.controls{display:flex;justify-content:center;margin-top:21px}.control{border:0;border-bottom:1px solid #bda09d;border-radius:0;background:transparent;color:#715957;padding:9px 2px 7px;font:500 9px 'DM Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;min-width:125px}.control:focus-visible{outline:1px solid var(--rose);outline-offset:5px}.footer{margin-top:27px;color:#a2928f;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+@media(max-width:600px){body{padding:24px 14px}.topline{margin-bottom:18px}.book-stage{height: min(690px,76svh);min-height:550px}.cover{padding:42px 27px}.cover:before{inset:13px}.cover:after{left:22px}.page{padding:34px 25px 28px 32px}.page:before{left:14px}.letter p{font-size:12.5px;line-height:1.85}.letter-head{margin-bottom:23px}.footer{margin-top:22px}}
+@media(prefers-reduced-motion:reduce){.cover,.page,.control{transition:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="topline">a note, kept just for you</div>
+  <section class="book-stage" id="book" aria-label="A digital love letter">
+    <button class="cover" id="cover" type="button" aria-label="Open the letter">
+      <span class="cover-index">a personal letter&nbsp; / &nbsp;01</span>
+      <span class="cover-title">for lara,<em>with love</em></span>
+      <span class="cover-mark" aria-hidden="true"></span>
+      <span class="cover-hint">turn the page</span>
+    </button>
+    <article class="page" aria-label="Love letter to Lara">
+      <div class="letter-head"><span>for lara, from memet</span><span>01 — 01</span></div>
+      <div class="letter">
+        <h1>hi, lara.</h1>
+        <p>i just want to take a little moment to remind you how much you mean to me. mungkin ada banyak hal yang belum sempat aku sampaikan secara langsung, so i thought i'd put some of them into this little letter.</p>
+        <p>first of all, thank you for being you. thank you for every little effort, every random story, every laugh, and all the small things you do. i appreciate them more than you know. sometimes, hal sesederhana ngobrol sama kamu atau dapet pesan darimu udah cukup buat bikin hari terasa lebih baik. and i hope you know how much i love that.</p>
+        <p>honestly, i'm really happy to have you in my life. i love your silly side, your random thoughts, your little habits, and everything that makes you, you. sometimes kamu bisa bikin aku bingung sendiri, but somehow, you're still my favorite person to talk to. i guess that's just one of the many things i love about you.</p>
+        <p>i hope we get to make more memories together. more dates, more random conversations, more laughter, and more little moments that we'll remember someday. aku ga berharap hubungan kita selalu berjalan sempurna, but i hope we never get tired of understanding each other. let's keep communicating, learning, and choosing each other, even on days when things aren't that easy.</p>
+        <p>i want to see you achieve everything you've been dreaming of, and hopefully, i'll get to be there through every little milestone. i'll always be happy to celebrate your victories, support you through difficult days, and remind you how special you are. i don't know exactly what the future holds, but i'd really love to have you in mine.</p>
+        <p>lastly, thank you for being my girl, lar. thank you for making ordinary days feel a little more special. i hope you never forget how loved and appreciated you are. i'll keep finding little ways to remind you, even when words aren't enough.</p>
+        <p>i love you, lara. more than i probably say, and definitely more than this little letter could explain. and yes, you're still a little annoying sometimes, but unfortunately, you're my favorite kind of annoying.</p>
+        <div class="signoff">your fav person,<br><strong>Memet.</strong></div>
+      </div>
+    </article>
+  </section>
+  <div class="controls"><button class="control" id="toggle" type="button" aria-expanded="false">open the letter</button></div>
+  <div class="footer">memet&nbsp; for&nbsp; lara</div>
+</main>
+<script>
+const book=document.getElementById('book');
+const toggle=document.getElementById('toggle');
+const cover=document.getElementById('cover');
+function setOpen(open){book.classList.toggle('open',open);toggle.textContent=open?'close the letter':'open the letter';toggle.setAttribute('aria-expanded',String(open));}
+cover.addEventListener('click',()=>setOpen(true));
+toggle.addEventListener('click',()=>setOpen(!book.classList.contains('open')));
+</script>
+</body>
+</html>
